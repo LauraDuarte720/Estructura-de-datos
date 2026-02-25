@@ -1,4 +1,4 @@
-package trabajo;
+package trabajo.ventas;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -23,7 +23,7 @@ public class RepoVentaH {
     }
 
     public ArrayList<Venta> obtenerVentas(){
-        return (ArrayList<Venta>) ventas.values();
+        return new ArrayList<>(ventas.values());
     }
 
     public ArrayList<Venta> obtenerVentasCodigoOrden(){

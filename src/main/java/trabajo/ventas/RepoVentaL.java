@@ -1,4 +1,4 @@
-package trabajo;
+package trabajo.ventas;
 
 import java.util.*;
 
@@ -18,7 +18,7 @@ public class RepoVentaL {
     }
 
     public ArrayList<Venta> obtenerVentas(){
-        return (ArrayList<Venta>) ventas.values();
+        return new ArrayList<>(ventas.values());
     }
 
     public ArrayList<Venta> obtenerVentasCodigoOrden(){
