@@ -1,14 +1,15 @@
-package trabajo;
+package trabajo.ventas;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
+import java.util.TreeMap;
 
 public class RepoVentaT {
-    private LinkedHashMap<String, Venta> ventas;
+    private TreeMap<String, Venta> ventas;
     private int numeroRegistro;
     public RepoVentaT(){
-        this.ventas = new LinkedHashMap<>();
+        this.ventas = new TreeMap<>();
         this.numeroRegistro = 0;
     }
 
@@ -23,7 +24,7 @@ public class RepoVentaT {
     }
 
     public ArrayList<Venta> obtenerVentas(){
-        return (ArrayList<Venta>) ventas.values();
+        return new ArrayList<>(ventas.values());
     }
 
     public ArrayList<Venta> obtenerVentasCodigoOrden(){
