@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         // ===== Crear ventas =====
         Venta v1 = Venta.builder()
                 .coidgo("V003")
