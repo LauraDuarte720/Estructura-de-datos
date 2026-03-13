@@ -19,6 +19,7 @@ public class RepoCliente {
             throw new RuntimeException("La cola esta vacia");
         }
         return colaClientes.poll();
+
     }
 
     public Cliente siguienteCliente(){

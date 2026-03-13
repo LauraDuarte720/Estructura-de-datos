@@ -1,3 +1,4 @@
+package Recursividad;
 
 public class Tarea {
 
@@ -10,6 +11,7 @@ public class Tarea {
         System.out.println(obtenerMayorR(arreglo));
         System.out.println(sumarArreglo(arreglo));
         System.out.println(busquedaBinaria(arreglo, 9));
+        System.out.println(factorial(5,1));
     }
 
 // Metodo recursivo para encontrar el mayor en un arreglo
@@ -84,6 +86,19 @@ public class Tarea {
         }
     }
 
+    private static int sumarMatrizR(int[][] matriz, int n, int m, int acc){
+        if (n == matriz.length) {
+            return acc;
+        }else{
+            if (m == matriz[n].length){
+                return sumarMatrizR(matriz, n+1,  0, acc);
+            }else{
+                acc += matriz[n][m];
+                return sumarMatrizR(matriz,n, m+1, acc);
+            }
+        }
+    }
+
     public static int obtenerMayorR(int [] arr){
         return obtenerMayorR(arr, 0, arr.length -1);
     }
@@ -137,5 +152,22 @@ public class Tarea {
         }
 
     }
+
+    public static int sumarNumeros(int n){
+        if (n == 0){
+            return 0;
+        }else{
+            return n + sumarNumeros(n-1);
+        }
+    }
+
+    public static int factorial(int n, int acc){
+        if (n == 1){
+            return acc;
+        }else{
+            return factorial(n -1, acc * n);
+        }
+    }
+
 
 }

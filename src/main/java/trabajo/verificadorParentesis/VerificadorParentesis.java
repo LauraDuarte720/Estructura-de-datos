@@ -1,4 +1,4 @@
-package verificadorParentesis;
+package trabajo.verificadorParentesis;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,8 @@ public class VerificadorParentesis {
                 if (!coincide(ultimo,el)) {
                     return false;
                 }
+
+
             }
         }
         return true;
